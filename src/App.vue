@@ -1,16 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Cálculo da Cotação</h1>
+  <h2>Digite a quantidade em reais e a cotação do dólar:</h2>
+
+  <div>
+    <InputText id="input-reais" type="text" v-model="reais"/>
+    <label for="input-reais" />
+  </div>
+
+  <div>
+    <InputText id="input-cotacao" type="text" v-model="cotacao"/>
+    <label for="input-cotacao" />
+  </div>
+
+  <div>
+    <Button label="Limpar" @click="limpar"/>
+    <Button label="Calcular" @click="calcular"/>
+  </div>
+
+  <div v-if="resultado">
+    <p>Com R${{ reais }} é possivel comprar {{ resultado }} dólares na cotação de {{ cotacao }}</p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      reais: null,
+      cotacao: null,
+      resultado: null
+    }
+  },
+  methods: {
+    calcular() {
+      this.resultado = (this.reais / this.cotacao).toFixed(2);
+    },
+    limpar(){
+      this.reais = null;
+      this.cotacao = null;
+      this.resultado = null;
+    }
   }
+
 }
 </script>
 
