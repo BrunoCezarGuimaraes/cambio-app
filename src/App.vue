@@ -56,4 +56,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+Button {
+  margin-left: 1rem !important;
+}
 </style>
