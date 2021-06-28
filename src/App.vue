@@ -3,12 +3,12 @@
   <h2>Digite a quantidade em reais e a cotação do dólar:</h2>
 
   <div>
-    <InputText id="input-reais" type="text" aria-placeholder="Reais" v-model="reais"/>
+    <InputText id="input-reais" type="number" aria-placeholder="Reais" v-model="reais"/>
     <label for="input-reais" />
   </div>
 
   <div>
-    <InputText id="input-cotacao" type="text" aria-placeholder="Cotacao" v-model="cotacao"/>
+    <InputText id="input-cotacao" type="number" aria-placeholder="Cotacao" v-model="cotacao"/>
     <label for="input-cotacao" />
   </div>
 
