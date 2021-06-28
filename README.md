@@ -24,4 +24,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Link da aplicação
-https://cambio-app-cioonu8tq-brunocezarguimaraes.vercel.app/
+https://cambio-app.vercel.app/
